@@ -165,8 +165,21 @@ a:hover {
     gap: 5px;
   }
 
+  #gameBoard {
+    gap: 10px;
+  }
+
   .game-infos {
     display: flex;
     gap: 20px;
+  }
+
+  .card {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .game-infos .current-info {
+    font-size: 1.5rem;
   }
 }
