@@ -29,13 +29,20 @@
     <main class="game-page">
       <div class="game-infos">
         <div class="time">
-          <p class="current-info">Tempo: 0:00</p>
-          <p class="best-info">Record: 0:00</p>
+          <p class="current-info">
+            Tempo
+            <span class="display"
+              ><span id="minutes">00</span>:<span id="seconds">00</span></span
+            >
+          </p>
+          <p class="best-info">Record <span class="best"></span></p>
         </div>
 
         <div class="moves">
-          <p class="current-info">Movimentos: 0</p>
-          <p class="best-info">Record: 0</p>
+          <p class="current-info">
+            Movimentos <span class="number-of-moves">0</span>
+          </p>
+          <p class="best-info">Record <span class="best-moves"></span></p>
         </div>
       </div>
       <div id="gameBoard"></div>
