@@ -121,7 +121,7 @@ function createCardFace(face, card, element) {
     iconElement.src = './assets/images/' + card.icon + '.png'
     cardElementFace.appendChild(iconElement)
   } else {
-    cardElementFace.innerHTML = '&lt/&gt'
+    cardElementFace.innerHTML = `<div class="icon-back-div"><img class="icon-back" src="./assets/images/icon-back.png" /></div>`
   }
 
   element.appendChild(cardElementFace)

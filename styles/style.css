@@ -1,3 +1,7 @@
+:root {
+  --font: 'Lalezar', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +9,22 @@
 }
 
 body {
-  font-family: 'Righteous', sans-serif;
+  font-family: var(--font);
 
-  background-color: #c7cdd3;
+  background-color: black;
   width: 100%;
+  color: yellow;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  padding: 20px 0 30px 0;
+  font-size: 4em;
+  padding: 0;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: yellow;
 }
 
 .game-page {
@@ -66,17 +74,24 @@ header {
 
 .card-front {
   transform: rotateY(180deg);
-  background-color: #101c2c;
+  background-color: rgba(0, 0, 0, 0.788);
+  border: 2px solid yellow;
 }
 
 .card-back {
   color: #101c2c;
-  background-color: #05c3ff;
+  background-color: yellow;
   font-size: 30px;
 }
 
 .icon {
-  width: 80%;
+  width: 100%;
+}
+
+.icon-back {
+  width: 50px;
+  height: 50px;
+  color: yellow;
 }
 
 #gameOver {
@@ -104,11 +119,12 @@ header {
 
 footer {
   padding-bottom: 0.5rem;
-
+  font-family: arial, sans-ser;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
+  font-size: 0.8rem;
 
   gap: 1rem;
 
@@ -121,7 +137,7 @@ a {
   font-size: 1.5rem;
   transition: 0.3s;
   text-decoration: none;
-  color: black;
+  color: yellow;
 }
 
 a:hover {
@@ -161,12 +177,14 @@ a:hover {
 
   header {
     padding: 20px 0 20px 0;
+    -webkit-text-stroke-width: 0.8px;
+    font-size: 3em;
   }
   .game-page {
     grid-template-columns: 1fr;
 
     align-content: center;
-    gap: 5px;
+    gap: 20px;
   }
 
   #gameBoard {
