@@ -1,9 +1,8 @@
 <h1 align="center">Jogo da Memória</h1>
 
 <p align="center">
-  <img src="./assets/readme/site.png" />
-  
-</p>
+      <img width="400px" src="./assets/readme/site.jpeg" />
+    </p>
 
 ## Sobre
 
