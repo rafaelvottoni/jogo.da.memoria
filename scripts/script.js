@@ -7,6 +7,7 @@ let seconds = 0
 let minutes = 0
 let timeInSeconds = 0
 let interval = null
+let formatBestTime
 
 let moves = 0
 let formatMoves
@@ -15,7 +16,6 @@ const Timer = {
   updateBestTime: function () {
     let bestTimeHTML = document.querySelector('.best')
     let getBestTimeStorage = localStorage.getItem('time')
-    let formatBestTime
 
     let formatMinutes = Math.trunc(parseInt(getBestTimeStorage) / 60)
 
@@ -77,6 +77,26 @@ const Timer = {
     minutes = 0
 
     seconds = 0
+  },
+
+  formatTimeForGameOverModal: function () {
+    let timeFormated
+
+    let formatMinutesGameOver = Math.trunc(parseInt(timeInSeconds) / 60)
+
+    let formatSecondsGameOver = Math.trunc(parseInt(timeInSeconds) % 60)
+
+    if (formatMinutesGameOver < 10 && formatSecondsGameOver < 10) {
+      timeFormated = `0${formatMinutesGameOver}:0${formatSecondsGameOver}`
+    } else if (formatMinutesGameOver < 10 && formatSecondsGameOver >= 10) {
+      timeFormated = `0${formatMinutesGameOver}:${formatSecondsGameOver}`
+    } else if (formatMinutesGameOver >= 10 && formatSecondsGameOver < 10) {
+      timeFormated = `${formatMinutesGameOver}:0${formatSecondsGameOver}`
+    } else {
+      timeFormated = `${formatMinutesGameOver}:${formatSecondsGameOver}`
+    }
+
+    return timeFormated
   }
 }
 
@@ -143,6 +163,10 @@ function flipCard() {
         if (game.checkGameOver()) {
           Timer.stopTime()
           setBestMovesInLocalStorage()
+
+          let infoEndGame = document.querySelector('.info-endgame')
+          infoEndGame.innerHTML = `${Timer.formatTimeForGameOverModal()} e ${formatMoves} movimentos`
+
           let gameOverLayer = document.getElementById('gameOver')
           gameOverLayer.style.display = 'flex'
         }
@@ -164,6 +188,8 @@ function flipCard() {
 function restart() {
   game.clearCards()
   startGame()
+  let movesInHTML = document.querySelector('.number-of-moves')
+  movesInHTML.innerHTML = '0'
   let gameOverLayer = document.getElementById('gameOver')
   gameOverLayer.style.display = 'none'
 }
