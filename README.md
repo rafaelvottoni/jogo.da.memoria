@@ -1,5 +1,7 @@
 <h1 align="center">Jogo da Memória</h1>
 
+<h3 align="center" ><a href="https://jogodamemoria-rafaelvottoni.netlify.app/">Site</a> </h3>
+
 <p align="center">
       <img width="400px" src="./assets/readme/site.jpeg" />
     </p>
