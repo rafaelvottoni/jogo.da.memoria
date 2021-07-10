@@ -99,18 +99,25 @@ header {
   color: yellow;
 }
 
-#gameOver {
+.gameOver {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   font-size: 3.125rem;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   top: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.gameOver.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .info-endgame {
@@ -224,7 +231,7 @@ a:hover {
     width: 130px;
   }
 
-  #gameOver {
+  .gameOver {
     text-align: center;
   }
 }

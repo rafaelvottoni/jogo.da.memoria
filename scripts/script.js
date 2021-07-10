@@ -167,8 +167,8 @@ function flipCard() {
           let infoEndGame = document.querySelector('.info-endgame')
           infoEndGame.innerHTML = `${Timer.formatTimeForGameOverModal()} e ${formatMoves} movimentos`
 
-          let gameOverLayer = document.getElementById('gameOver')
-          gameOverLayer.style.display = 'flex'
+          let gameOverLayer = document.querySelector('.gameOver')
+          gameOverLayer.classList.add('show')
         }
       } else {
         setTimeout(() => {
@@ -190,8 +190,8 @@ function restart() {
   startGame()
   let movesInHTML = document.querySelector('.number-of-moves')
   movesInHTML.innerHTML = '0'
-  let gameOverLayer = document.getElementById('gameOver')
-  gameOverLayer.style.display = 'none'
+  let gameOverLayer = document.querySelector('.gameOver')
+  gameOverLayer.classList.remove('show')
 }
 
 function updateBestMoves() {
