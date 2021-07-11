@@ -18,6 +18,7 @@ body {
 
 header {
   display: flex;
+  -webkit-display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4em;
@@ -63,6 +64,7 @@ header {
   height: 100%;
   position: absolute;
   display: flex;
+  -webkit-display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -107,6 +109,7 @@ header {
   color: white;
   font-size: 3.125rem;
   display: flex;
+  -webkit-display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -135,9 +138,10 @@ header {
 }
 
 footer {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
   font-family: arial, sans-ser;
   display: flex;
+  -webkit-display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -148,6 +152,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 
 a {
@@ -182,7 +187,7 @@ a:hover {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 550px) {
   footer {
     display: none;
   }
@@ -211,6 +216,7 @@ a:hover {
 
   .game-infos {
     display: flex;
+    -webkit-display: flex;
     gap: 20px;
   }
 
